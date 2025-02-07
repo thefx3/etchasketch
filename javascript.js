@@ -12,7 +12,7 @@ function createGrid(x){
 
     square.addEventListener("mouseover", (event) => {
       // highlight the mouseover target
-      event.target.style.backgroundColor = "orange";
+      event.target.style.backgroundColor = randomColor();
               
       // reset the color after a short delay
       setTimeout(() => {
@@ -39,3 +39,20 @@ button.addEventListener('click', function() {
     }
     createGrid(size);
   });
+
+
+
+function randomNumber(){
+  let random = Math.floor(Math.random()*16);
+  return random;
+}
+
+function randomColor(){
+  const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]; /* Color = # 123456  with 6 characters from the hexCharacters array */
+  let newcolor = "#";
+  for (let i=0;i<6;i++){
+    newcolor += hexCharacters[randomNumber()];
+  }
+
+  return newcolor;
+}
