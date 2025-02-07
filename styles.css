@@ -2,21 +2,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     margin: auto;
-    /* width: 1000px;
-    height: 1000px; */
-
-    height: 95vw;
-    width: 95vw;
  
-    /* border : 2px solid blue;  */
+    border : 2px solid rgb(0, 0, 0); 
 }
 
-.grid > * {
-    aspect-ratio: 1 / 1;
-    min-width:10px;
-    flex : 1 0 calc(100% / var(--cols));
-    max-width: calc(95%/var(--cols));
+.grid >* {
+    
+    box-sizing: border-box;
     border: 1px solid black;
 }
