@@ -2,14 +2,19 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: auto;
-    width: 90%;
+    width: 1000px;
+    height: 1000px;
+ 
+    border : 2px solid blue; 
 }
 
-.grid > div {
+.grid > * {
     aspect-ratio: 1 / 1;
-    min-width: 25px;
+    min-width: 10px;
+    flex : 1 0 calc(100% / var(--cols));
+    max-width: calc(95% / var(--cols));
     border: 1px solid black;
 }
 
