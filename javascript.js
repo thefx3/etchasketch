@@ -23,11 +23,19 @@ function createGrid(x){
   }
 }
 
-createGrid(10); /* Create the grid */
- 
+createGrid(15); /* Create the grid */
+
 
 const button = document.querySelector("button");
+button.style.display = "block";
+button.style.margin = "20px auto";
+button.style.padding = "10px 20px";
+button.style.fontSize = "16px";
 
 button.addEventListener('click', function() {
-    const size = prompt("New grid size ?");
+    let size = prompt("New grid size ?");
+    while(size>100 || size<0){
+      size = prompt("Insert a correct value : ");
+    }
+    createGrid(size);
   });
